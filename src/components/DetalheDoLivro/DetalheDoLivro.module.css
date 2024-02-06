@@ -1,0 +1,10 @@
+.livro{
+	font-size: 0.7rem;
+		font-family: 'Roboto', sans-serif;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+  	margin: 15px;
+	text-align: center;
+	color: #575757;
+	}

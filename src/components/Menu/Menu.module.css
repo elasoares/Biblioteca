@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Salsa&display=swap');
+ul li{
+	list-style: none;
+}
+
+
+.styleContainer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+	padding: 5px;
+		background-color: #585123;
+}
+
+.primeiroItem{
+	flex-grow:1;
+	font-size: 1.3rem;
+	font-family: 'Pacifico', cursive;
+	padding: 10px;
+	color: #fefae0;
+	cursor: pointer;
+	transition: all 200ms ease-in-out;
+}
+
+.segundoItem{
+	transition: all 200ms ease-in-out;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 5px;
+	background-color: transparent;
+	color: #fefae0;
+}
+
+.segundoItem:hover{
+	filter: brightness(0.5);
+}
+.iconItem{
+	font-size: 1.3rem;
+	color:#fefae0 ;
+	cursor: pointer;
+	background-color: #f2c078;
+	border-radius: 0 3px 3px 0;
+	margin:2px;
+ padding: 0 5px; 
+
+}
+.iconItem:hover{
+	filter: brightness(0.5);
+}
+
+
+.containerIcon{
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	 flex-grow: 1;
+}
+
+.itens{
+	display: none;
+	color: #f2c078;
+	cursor: pointer;
+	transition: all 100ms ease-in-out;
+	font-family: 'Roboto', sans-serif;
+}
+
+.contato{
+	background-color: transparent;
+		border: 1px solid #f2c078;
+		color: #f2c078;
+		cursor: pointer;
+		padding: 10px;
+		border-radius: 3px;
+}
+.contatohover {
+	filter: brightness(0.85);
+}
+
+.itens:hover{
+	filter: brightness(0.85);
+}
+
+.iconBar{
+	color:#f2c078 ;
+	font-size: 1.4rem;
+	cursor: pointer;
+}
+
+@media (min-width: 700px){
+	.itens{
+		display: block;
+	}
+	.iconBar{
+		display: none;
+	}
+}

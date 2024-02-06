@@ -1,0 +1,10 @@
+.container {
+/* 	background-image: url("../imagens/henry-be-TCsCykbwSJw-unsplash.jpg");
+	background-size: cover;
+	background-position: center;
+} */
+	background-image: url("src/components/BookList/colecao-abundante-de-livros-antigos-em-prateleiras-de-madeira-geradas-por-ia.jpg");
+	background-size: cover;
+	background-position: center;
+	padding: 25px;
+}
