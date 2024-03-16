@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
 import BooksListPage from "../../pages/BooksListPage";
 import styles from "../BookList/BookList.module.css";
+import { CiSearch } from "react-icons/ci";
 
 export function BookList() {
   const [livros, setLivros] = useState();
+  const [livrosPesquisados, setLivrosPesquisados] = useState("");
+  const [livrosFiltrados, setLivrosFiltrados] = useState([]);
+
   const url = "https://t3t4-dfe-pb-grl-m1-default-rtdb.firebaseio.com";
   const recurso = "/books.json";
   const uri = url + recurso;
@@ -16,6 +20,7 @@ export function BookList() {
         const fetchParaJson = await fetchRequisitar.json();
         const desestruturar = desestruturacao(fetchParaJson);
         setLivros(desestruturar);
+        setLivrosFiltrados(desestruturar);
       } catch (erro) {
         tratarError(erro);
       }
@@ -40,9 +45,35 @@ export function BookList() {
     );
   }
 
+  const changeInput = (event) => {
+    setLivrosPesquisados(event.target.value);
+  };
+
+  const filtrando = () => {
+    const livrosFiltrados = livros.filter(
+      (livro) =>
+        livro.title.toLowerCase().includes(livrosPesquisados.toLowerCase()) ||
+        livro.author.toLowerCase().includes(livrosPesquisados.toLowerCase()) ||
+        livro.genre.toLowerCase().includes(livrosPesquisados.toLowerCase()),
+    );
+    setLivrosFiltrados(livrosFiltrados);
+  };
+
   return (
-    <div className={styles.container}>
-      <BooksListPage book={livros} />
+    <div>
+      <div className={styles.containerInput}>
+        <input
+          value={livrosPesquisados}
+          type="text"
+          placeholder="Pesquise aqui seu livro"
+          onChange={changeInput}
+        />
+        <CiSearch className={styles.search} onClick={filtrando} />
+      </div>
+
+      <div className={styles.container}>
+        <BooksListPage book={livrosFiltrados} />
+      </div>
     </div>
   );
 }

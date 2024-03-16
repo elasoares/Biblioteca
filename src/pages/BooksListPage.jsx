@@ -3,9 +3,9 @@ import { LiaStarSolid } from "react-icons/lia";
 import styles from "./BooksListPage.module.css";
 import { CardBook } from "../components/CardBook/CardBook";
 
-function BookListPage({ book }) {
+function BookListPage({ book, className }) {
   return (
-    <div className={styles.container}>
+    <div className={`${className} ${styles.container}`}>
       {book.map((livro) => (
         <CardBook key={livro.id}>
           <img className={styles.capa} src={livro.cover} />

@@ -1,42 +1,44 @@
-import estilos from "../Menu/Menu.module.css";
-import { CiSearch } from "react-icons/ci";
+import estilos from "./Menu.module.css";
 import { FiAlignJustify } from "react-icons/fi";
+import { useState } from "react";
 
 export function Menu() {
-  /* const Button = styled.button`
-    background-color: #6f1d1b;
-    border: 1px solid #fefae0;
-    color: #fefae0;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 3px;
-    transition: all 200ms ease-in-out;
-    &:hover {
-      filter: brightness(0.85);
-    }
-  `; */
+  const [nav, setNav] = useState(false);
 
+  const openNavegation = () => {
+    setNav(!nav);
+  };
+
+  const menuLinks = [
+    { name: "Home", link: "home" },
+    { name: "Acervo", link: "acervo" },
+    { name: "Contato", link: "contato" },
+  ];
   return (
     <>
       <header>
-        <nav>
-          <ul className={estilos.styleContainer}>
-            <li className={estilos.primeiroItem}>B</li>
-            <li>
-              <div className={estilos.containerIcon}>
-                <input className={estilos.segundoItem} type="search" />
-                <span className={estilos.iconItem}>
-                  <CiSearch />
-                </span>
-              </div>
-            </li>
-            <li className={estilos.itens}>Home</li>
-            <li className={estilos.itens}>Acervo</li>
-            <li className={`${estilos.contato} ${estilos.itens}`}>Contato</li>
-            <li>
-              <FiAlignJustify className={estilos.iconBar} />{" "}
-            </li>
+        <nav className={estilos.styleContainer}>
+          <h1 className={estilos.primeiroItem}>B</h1>
+
+          <ul
+            className={`${estilos.containerMenu} ${
+              nav ? estilos.active : estilos.itens
+            }`}
+          >
+            {menuLinks.map((menu, index) => (
+              <li className={estilos.listItem} key={index}>
+                <a className={estilos.link} href={`#${menu.link}`}>
+                  {menu.name}
+                </a>
+              </li>
+            ))}
           </ul>
+          <div>
+            <FiAlignJustify
+              onClick={openNavegation}
+              className={estilos.iconBar}
+            />
+          </div>
         </nav>
       </header>
     </>

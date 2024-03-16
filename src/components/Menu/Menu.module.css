@@ -4,7 +4,6 @@ ul li{
 	list-style: none;
 }
 
-
 .styleContainer{
 	display: flex;
 	justify-content: space-between;
@@ -25,48 +24,40 @@ ul li{
 	transition: all 200ms ease-in-out;
 }
 
-.segundoItem{
-	transition: all 200ms ease-in-out;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	padding: 5px;
-	background-color: transparent;
-	color: #fefae0;
-}
-
-.segundoItem:hover{
-	filter: brightness(0.5);
-}
-.iconItem{
-	font-size: 1.3rem;
-	color:#fefae0 ;
-	cursor: pointer;
-	background-color: #f2c078;
-	border-radius: 0 3px 3px 0;
-	margin:2px;
- padding: 0 5px; 
-
-}
-.iconItem:hover{
-	filter: brightness(0.5);
-}
 
 
-.containerIcon{
-	background-color: transparent;
+.active{
 	display: flex;
-	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: space-between;
 	align-items: center;
-	 flex-grow: 1;
+	position: absolute;
+	top: 80px;
+	right: 0;
+	left: 0;
+	padding: 15px;
+	backdrop-filter: blur(15px);
 }
 
-.itens{
-	display: none;
+.link{
+	/* background-color: #585123; */
 	color: #f2c078;
 	cursor: pointer;
 	transition: all 100ms ease-in-out;
 	font-family: 'Roboto', sans-serif;
 }
+.link:hover{
+	filter: brightness(0.85);
+}
+
+
+.itens li{
+	display: none;
+}
+
+
 
 .contato{
 	background-color: transparent;
@@ -76,13 +67,12 @@ ul li{
 		padding: 10px;
 		border-radius: 3px;
 }
+
 .contatohover {
 	filter: brightness(0.85);
 }
 
-.itens:hover{
-	filter: brightness(0.85);
-}
+
 
 .iconBar{
 	color:#f2c078 ;
@@ -91,9 +81,15 @@ ul li{
 }
 
 @media (min-width: 700px){
-	.itens{
-		display: block;
+	.containerMenu{
+		display: flex;
+	flex-direction: row;	
+		gap: 15px;
 	}
+	.itens li{
+		display: flex;
+	}
+	
 	.iconBar{
 		display: none;
 	}

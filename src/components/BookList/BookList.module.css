@@ -1,3 +1,29 @@
+.containerInput{
+	backdrop-filter: blur(5px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 25px;
+}
+
+input{
+		width: 350px;
+		height: 35px;
+	border-radius: 5px;
+	border: solid 1px #ccc;
+	padding: 10px;
+}
+
+.search{
+	font-size: 36px;
+	color: #ccc;
+}
+.search:hover{
+	font-weight: bold;
+	color: #ffb703;
+	cursor: pointer;
+}
+
 .container {
 /* 	background-image: url("../imagens/henry-be-TCsCykbwSJw-unsplash.jpg");
 	background-size: cover;

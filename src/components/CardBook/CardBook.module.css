@@ -7,14 +7,7 @@
 	align-items: center;
 	border-radius: 10px;
 }
-.cardBook:hover{
-	border: 1px solid #ffb703;
-/* 	cursor: pointer;
-	box-shadow:
-		14.9px 17.5px 62.6px rgba(0, 0, 0, 0.065),
-		119px 140px 500px rgba(0, 0, 0, 0.13)
-	; */
-}
+
 
 @media (min-width: 850px){
 	.cardBook{
