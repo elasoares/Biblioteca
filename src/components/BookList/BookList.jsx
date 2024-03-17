@@ -78,12 +78,23 @@ export function BookList() {
         <input
         data-cy='inputPesquisa'
           value={livrosPesquisados}
-          type="text"
+          type="search"
           placeholder="Pesquise aqui seu livro"
           onChange={changeInput}
         />
         <CiSearch data-cy='botaoPesquisa' className={styles.search} onClick={filtrando} />
       </div>
+      <div className={styles.container}>
+  {livrosPesquisados.length > 0 ? (
+ <ul>
+ <li key={livrosFiltrados[0].id}>
+   {livrosFiltrados[0].title} - {livrosFiltrados[0].author} - {livrosFiltrados[0].genre}
+ </li>
+</ul>
+  ) : (
+    <p>{pesquisaAtiva ? "Nenhum livro encontrado." : "Faça uma pesquisa para encontrar seu livro desejado."}</p>
+  )}
+</div>
       <div >
   <BooksListPage className={styles.container} book={livrosFiltrados} />
 </div>

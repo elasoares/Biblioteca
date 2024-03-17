@@ -6,43 +6,46 @@ import { useState } from "react";
 export function Menu() {
   const [nav, setNav] = useState(false);
 
-  const openNavegation = () => {
+  const openNavigation = () => {
     setNav(!nav);
   };
 
-  const menuLinks = [
-    { name: "Home", link: "home" },
-    { name: "Acervo", link: "acervo" },
-    { name: "Contato", link: "contato" },
-  ];
-  return (
-    <>
-      <header>
-        <nav className={estilos.styleContainer}>
-          <h1 className={estilos.primeiroItem}>B</h1>
+  const goToHomePage = () => {
+    window.location.href = "/";
+  };
 
-          <ul
-            className={`${estilos.containerMenu} ${
-              nav ? estilos.active : estilos.itens
-            }`}
-          >
-            {menuLinks.map((menu, index) => (
-              <li className={estilos.listItem} key={index}>
+  const menuLinks = [
+    { name: "Home", link: "/" },
+    { name: "Acervo", link: "/acervo" },
+    { name: "Contato", link: "/contato" },
+  ];
+
+  return (
+    <header>
+      <nav className={estilos.styleContainer}>
+        <h1 className={estilos.primeiroItem}>B</h1>
+
+        <ul className={`${estilos.containerMenu} ${nav ? estilos.active : estilos.itens}`}>
+          {menuLinks.map((menu, index) => (
+            <li className={estilos.listItem} key={index}>
+              {menu.name === "Home" ? (
+                <a className={estilos.link} onClick={goToHomePage}>
+                  {menu.name}
+                </a>
+              ) : (
                 <a className={estilos.link} href={`#${menu.link}`}>
                   {menu.name}
                 </a>
-              </li>
-            ))}
-          </ul>
-          <div>
-            <FiAlignJustify
-              onClick={openNavegation}
-              className={`${estilos.iconBar} ${nav ? estilos.noActive: estilos.iconBar}`}
-            />
-            <IoMdClose onClick={openNavegation} className={`${estilos.iconBar} ${nav ? estilos.iconBar : estilos.noActive}`}/>
-          </div>
-        </nav>
-      </header>
-    </>
+              )}
+            </li>
+          ))}
+        </ul>
+
+        <div>
+          <FiAlignJustify onClick={openNavigation} className={`${estilos.iconBar} ${nav ? estilos.noActive : estilos.iconBar}`} />
+          <IoMdClose onClick={openNavigation} className={`${estilos.iconBar} ${nav ? estilos.iconBar : estilos.noActive}`} />
+        </div>
+      </nav>
+    </header>
   );
 }
