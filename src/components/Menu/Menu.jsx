@@ -1,5 +1,6 @@
 import estilos from "./Menu.module.css";
 import { FiAlignJustify } from "react-icons/fi";
+import { IoMdClose } from "react-icons/io";
 import { useState } from "react";
 
 export function Menu() {
@@ -36,8 +37,9 @@ export function Menu() {
           <div>
             <FiAlignJustify
               onClick={openNavegation}
-              className={estilos.iconBar}
+              className={`${estilos.iconBar} ${nav ? estilos.noActive: estilos.iconBar}`}
             />
+            <IoMdClose onClick={openNavegation} className={`${estilos.iconBar} ${nav ? estilos.iconBar : estilos.noActive}`}/>
           </div>
         </nav>
       </header>

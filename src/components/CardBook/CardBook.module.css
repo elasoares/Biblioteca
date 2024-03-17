@@ -6,11 +6,12 @@
 	justify-content: center;
 	align-items: center;
 	border-radius: 10px;
+	border: 1px solid #ccc;
 }
 
 
 @media (min-width: 850px){
 	.cardBook{
-		width: 230px;
+		width: 290px;
 	}
 }

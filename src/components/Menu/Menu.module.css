@@ -30,14 +30,13 @@ ul li{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	width: 100%;
+	width: 50%;
 	justify-content: space-between;
 	align-items: center;
-	position: absolute;
+	/* position: absolute;
 	top: 80px;
 	right: 0;
-	left: 0;
-	padding: 15px;
+	left: 0; */
 	backdrop-filter: blur(15px);
 }
 
@@ -73,12 +72,18 @@ ul li{
 }
 
 
-
+.noActive{
+	display: none;
+}
 .iconBar{
 	color:#f2c078 ;
 	font-size: 1.4rem;
 	cursor: pointer;
 }
+
+
+
+
 
 @media (min-width: 700px){
 	.containerMenu{

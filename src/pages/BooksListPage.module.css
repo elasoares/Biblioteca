@@ -21,13 +21,13 @@ a{
 	border-radius: 5px;
 	width: 80%;
 	margin: 0 auto;
-	box-shadow:
+	/* box-shadow:
 		3.6px 4.8px 17.2px rgba(0, 0, 0, 0.04),
 		9.1px 12.2px 43.4px rgba(0, 0, 0, 0.058),
 		18.6px 24.8px 88.6px rgba(0, 0, 0, 0.072),
 		38.3px 51.1px 182.5px rgba(0, 0, 0, 0.09),
 		105px 140px 500px rgba(0, 0, 0, 0.13)
-	;
+	; */
 }
 
 .capa{
@@ -98,7 +98,7 @@ color: #ffb703;
 	gap: 5px;
 }
 
-@media (min(witdh: 600px)){
+@media (min-width: 600px){
 	.container{
 		flex-direction: row;
 		justify-content: space-between;

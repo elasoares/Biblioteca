@@ -6,31 +6,50 @@
 	padding: 25px;
 }
 
-input{
-		width: 350px;
-		height: 35px;
-	border-radius: 5px;
-	border: solid 1px #ccc;
+input {
+	width: 50%;
+	height: 45px;
 	padding: 10px;
-}
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	font-size: 16px;
+	color: #333;
+	outline: none;
+	transition: border-color 0.3s ease;
+  }
+  
+  input:focus {
+	border-color: #f2c078;
+  }
+  
 
 .search{
 	font-size: 36px;
-	color: #ccc;
+	color: #f2c078;
+
 }
 .search:hover{
 	font-weight: bold;
-	color: #ffb703;
+	color: #ccc;
 	cursor: pointer;
 }
 
-.container {
+.container  {
 /* 	background-image: url("../imagens/henry-be-TCsCykbwSJw-unsplash.jpg");
 	background-size: cover;
 	background-position: center;
 } */
-	background-image: url("src/components/BookList/colecao-abundante-de-livros-antigos-em-prateleiras-de-madeira-geradas-por-ia.jpg");
+/* 	background-image: url("src/components/BookList/colecao-abundante-de-livros-antigos-em-prateleiras-de-madeira-geradas-por-ia.jpg");
 	background-size: cover;
-	background-position: center;
-	padding: 25px;
+	background-position: center; */
+	display: flex;
+	position: relative;
+	top: 0;
+	left:0;
+	right: 0;
+	justify-content: center;
+	align-items: center;
+	
 }
+
+  
