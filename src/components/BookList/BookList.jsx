@@ -65,7 +65,6 @@ export function BookList() {
         livro.author.toLowerCase().includes(livrosPesquisados.toLowerCase()) ||
         livro.genre.toLowerCase().includes(livrosPesquisados.toLowerCase()),
     );
-    console.log("Livros filtrados:", livrosFiltrados); 
     setLivrosFiltrados(livrosFiltrados);
    /*  setLivrosPesquisados(""); */
     setPesquisaAtiva(true);
@@ -86,13 +85,13 @@ export function BookList() {
       </div>
       <div className={styles.container}>
   {livrosPesquisados.length > 0 ? (
- <ul>
- <li key={livrosFiltrados[0].id}>
-   {livrosFiltrados[0].title} - {livrosFiltrados[0].author} - {livrosFiltrados[0].genre}
- </li>
-</ul>
+    <ul>
+    <li key={livrosFiltrados[0].id}>
+      {livrosFiltrados[0].title} - {livrosFiltrados[0].author} - {livrosFiltrados[0].genre}
+    </li>
+   </ul>
   ) : (
-    <p>{pesquisaAtiva ? "Nenhum livro encontrado." : "Faça uma pesquisa para encontrar seu livro desejado."}</p>
+    <p>{livrosFiltrados ?  "Faça uma pesquisa para encontrar seu livro desejado." : "Nenhum livro encontrado."}</p>
   )}
 </div>
       <div >
