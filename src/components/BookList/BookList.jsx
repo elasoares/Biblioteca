@@ -9,7 +9,7 @@ export function BookList() {
   const [livrosFiltrados, setLivrosFiltrados] = useState([]);
   const [pesquisaAtiva, setPesquisaAtiva] = useState(false);
 
-  const url = "https://t3t4-dfe-pb-grl-m1-default-rtdb.firebaseio.com";
+  const url = "https://livraria-digital-5e7cf-default-rtdb.firebaseio.com";
   const recurso = "/books.json";
   const uri = url + recurso;
   const tratarError = (erro) => console.error(`Erro ao obter dados: ${erro}`);
