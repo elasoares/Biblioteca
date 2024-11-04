@@ -1,17 +1,29 @@
-## Running React on Repl.it
+# 📚 Biblioteca - Sistema de Pesquisa e Listagem de Livros
 
-[React](https://reactjs.org/) is a popular JavaScript library for building user interfaces.
+Este é um projeto de sistema de biblioteca, desenvolvido como parte de um módulo acadêmico, que permite a busca e exibição de livros a partir de uma base de dados online. A aplicação foi construída com **React** e utiliza o **Firebase Realtime Database** para armazenar e fornecer dados sobre os livros.
 
-[Vite](https://vitejs.dev/) is a blazing fast frontend build tool that includes features like Hot Module Reloading (HMR), optimized builds, and TypeScript support out of the box.
+## 📖 Funcionalidades
 
-Using the two in conjunction is one of the fastest ways to build a web app.
+- **Pesquisa de Livros**: Busque livros pelo título, autor ou gênero.
+- **Listagem Detalhada**: Exiba uma lista de livros com capa, título, autor, gênero, formato e avaliação.
+- **Detalhes do Livro**: Cada livro conta com uma seção que exibe informações adicionais.
+- **Carregamento Dinâmico**: Exibe um indicador de carregamento enquanto os dados estão sendo buscados no banco de dados.
 
-### Getting Started
-- Hit run
-- Edit [App.jsx](#src/App.jsx) and watch it live update!
+## 🛠️ Tecnologias Utilizadas
 
-By default, Replit runs the `dev` script, but you can configure it by changing the `run` field in the [configuration file](#.replit). Here are the vite docs for [serving production websites](https://vitejs.dev/guide/build.html)
+- **React** - Biblioteca principal para construção da interface.
+- **Vite** - Ferramenta para bundling e desenvolvimento rápido.
+- **Firebase Realtime Database** - Base de dados em tempo real para armazenamento e atualização dos dados de livros.
+- **CSS Modules** - Estilização modular para componentes React.
+- **React Icons** - Biblioteca de ícones para React.
 
-### Typescript
+## 📦 Instalação e Configuração
 
-Just rename any file from `.jsx` to `.tsx`. You can also try our [TypeScript Template](https://replit.com/@replit/React-TypeScript)
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/seu-usuario/biblioteca.git
+   
+2. Acessar a rede social:
+
+ [Acessar o site que foi hospedado](https://elasoares.github.io/Biblioteca/)
