@@ -24,6 +24,6 @@ Este é um projeto de sistema de biblioteca, desenvolvido como parte de um módu
    ```bash
    git clone https://github.com/seu-usuario/biblioteca.git
    
-2. Acessar a rede social:
+2. Vizualizar o site:
 
  [Acessar o site que foi hospedado](https://elasoares.github.io/Biblioteca/)
